@@ -2,7 +2,7 @@
 name = "floem_reactive"
 version.workspace = true
 edition = "2021"
-repository = "https://github.com/lapce/floem"
+repository = "https://github.com/chazfg/floem"
 description = "A native Rust UI library with fine-grained reactivity"
 license.workspace = true
 
