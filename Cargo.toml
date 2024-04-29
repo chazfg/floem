@@ -95,4 +95,4 @@ rfd-async-std = ["dep:rfd", "rfd/async-std"]
 rfd-tokio = ["dep:rfd", "rfd/tokio"]
 # rfd backend
 rfd-gtk = ["dep:rfd", "rfd/gtk3"]
-rfd-xdg = ["dep:rfd", "rfd/xdg-desktop-portal"]
+rfd-xdg = ["dep:rfd", "rfd/xdg-portal"]
