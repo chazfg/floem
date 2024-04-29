@@ -38,9 +38,7 @@ rustc-hash = "1.1.0"
 smallvec = "1.10.0"
 educe = "0.5.11"
 taffy = { version = "0.4", features = ["grid"] }
-rfd = { version = "0.14.0", default-features = false, features = [
-    "xdg-portal",
-], optional = true }
+rfd = { version = "0.14.0", default-features = false, optional = true }
 raw-window-handle = { workspace = true }
 kurbo = { version = "0.9.5", features = ["serde"] }
 unicode-segmentation = "1.10.0"
@@ -67,7 +65,7 @@ im = { workspace = true }
 wgpu = { workspace = true }
 
 [features]
-default = ["editor", "default-image-formats"]
+default = ["editor", "default-image-formats", "rfd-xdg"]
 # TODO: this is only winit and the editor serde, there are other dependencies that still depend on
 # serde
 serde = ["floem-winit/serde", "dep:serde"]
@@ -95,3 +93,6 @@ image-webp = ["image/webp"]
 # rfd (file dialog) async runtime
 rfd-async-std = ["dep:rfd", "rfd/async-std"]
 rfd-tokio = ["dep:rfd", "rfd/tokio"]
+# rfd backend
+rfd-gtk = ["dep:rfd", "rfd/gtk3"]
+rfd-xdg = ["dep:rfd", "rfd/xdg-desktop-portal"]
